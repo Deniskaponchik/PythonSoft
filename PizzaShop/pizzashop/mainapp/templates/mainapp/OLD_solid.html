@@ -1,0 +1,26 @@
+<div>
+    <style>
+        corpus {
+            display: flex;
+            flex-direction: column;
+        }
+        parts {
+
+        }
+    </style>
+
+
+    <corpus>
+
+        <!-- banner.html будет показывать баннеры со скидками, предложениями-->
+        <parts>
+            {% include 'mainapp/banner.html' %}
+        </parts>
+
+        <!-- banner.html будет показывать баннеры с скидками, предложениями -->
+        <parts>
+            {% include 'mainapp/pizzas.html' %}
+        </parts>
+
+    </corpus>
+</div>

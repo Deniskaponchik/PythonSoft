@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        h1 {
+          font-family: Monotype Corsiva
+          font-size: 40px;
+          color: #850863
+        }
+        basket {
+          font-family: Monotype Corsiva
+          font-size: 20px;
+          color: #850863
+        }
+        header {
+          width: 100%
+          height: 10%;
+          border-bottom: 2px solid black;
+        }
+        h5 {
+          font-family: Monotype Corsiva
+          font-size: 40px;
+          color: #850863
+          position: absolute;
+        }
+        <!-- Чтобы опустить кнопки, нужно прописать класс для кнопок соцсетей, который будет задавать их размер и после этого прописать высоту в теге buttons -->
+        .social{
+            height: 40px;
+            width: 40px
+        }
+        buttons {
+            position: absolute;
+            bottom: 35px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {% include 'mainapp/headers.html' %}
+    </header>
+    <solid>
+        {% block solid %}{% endblock %}
+    </solid>
+    <footer>
+        {% include 'mainapp/footer.html' %}
+    </footer>
+</body>
+</html>

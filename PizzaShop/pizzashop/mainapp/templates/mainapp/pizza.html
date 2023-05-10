@@ -1,0 +1,65 @@
+<!-- ШАБЛОН для создания пицц -->
+<div>
+    <!-- У нас будет два класса стилей для текста: heading и description -->
+    <style>
+        dough {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .heading{
+            font-family: Open Sans;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .description{
+            font-family: Open Sans;
+            font-size: 12px;
+            font-weight: 100;
+            color: #757575;
+        }
+    </style>
+
+
+    <dough>
+<!--            Image -->
+        <filling>
+            <img src="https://github.com/yodo-im/python_pizza/blob/main/pizza/{{ url }}.jpeg?raw=true"
+                 width="200px" height="200px" alt="">
+        </filling>
+
+<!--            Title -->
+        <filling>
+            <center>
+                <text class="heading">
+                    {{ name }}
+                </text>
+            </center>
+        </filling>
+
+<!--            Description -->
+        <filling style="height: 100px">
+            <text class="description">
+                {{ text }}
+            </text>
+        </filling>
+
+<!--            Price -->
+        <filling>
+            <h7>
+                300р.
+            </h7>
+        </filling>
+
+<!--     Buy button -->
+<!--     position зададим правило не  absolute, а relative, оно говорит, что меняем положения, исходя из настоящего положения (положения в данный момент). С помощью правила left подвинем кнопку  -->
+        <filling>
+            <button style="position: relative; left:80px">
+                Заказать
+            </button>
+        </filling>
+
+
+    </dough>
+</div>

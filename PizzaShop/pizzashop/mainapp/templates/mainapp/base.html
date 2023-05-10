@@ -1,0 +1,57 @@
+<!-- В этот раз мы будем пользоваться flex контейнерами с их помощью мы сможем поделить страницу на части и в каждой части что-то прописать, вывести. Это будет выглядеть лучше и краше -->
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Python pizza</title>
+
+    <!-- Именно правило display: flex говорит, что у нас flex контейнеры. Но так мы их не увидим, поэтому нужно написать правило, которое поменяет цвет для тегов детей: -->
+    <!-- введем для родительского тега правило размещение дочерних тегов вертикально: -->
+    <!-- background в виде деревянной доски -->
+
+    <!-- Основное тело body: зафиксируем ширину в 1010 пикселей, а что бы блок был по центру настроим margin, используя специальные команды margin-left и margin-right -->
+    <style>
+        grandperents {
+            display: flex;
+            flex-direction: column;
+            background: url(https://github.com/yodo-im/python_pizza/blob/main/fon/fon.jpg?raw=true);
+        }
+        perents {
+            height: 200px;
+            flex: 1;
+        }
+        body {
+            margin: 0px;
+            width: 1010px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, text {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <grandperents>
+        <perents>
+            {% include 'mainapp/headers.html' %}
+        </perents>
+
+        <perents style="height: 400px;">
+            {% block solid %}{% endblock %}
+        </perents>
+
+        <perents>
+            {% include 'mainapp/footer.html' %}
+        </perents>
+
+    </grandperents>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,45 @@
+<!-- В нем будут лежать кнопки внизу экрана -->
+<!-- Для начала нам понадобится тег div, в который будет все сложено -->
+<div>
+    <!-- пропишем структуру стилей для родительского и дочерних тегов -->
+    <!-- В родительском стиле нам нужно указать, что мы используем flex и сразу же укажем, что контейнеры должны располагаться по горизонтали -->
+    <!-- justify-content - правило, чтобы дочерние блоки равномерно распределялись в заданном пространстве.space-around - свойство относится к свойству родительского блока
+    <style>
+        messegers {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        messeger {
+            width:  30px;
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+
+    <!--  Родительский тег я назову как и файл messegers -->
+    <messegers>
+        <!-- VK       -->
+        <!-- a TAB -->
+        <!-- alt - нужен на случай неудавшейся загрузки изображения, если оно не отобразилось, то это правило выведет текст, который оно содержит -->
+        <messeger>
+            <center>
+                <a href=""></a>
+                    <img src="https://github.com/yodo-im/python_pizza/blob/main/messeger/Vk.png?raw=true"
+                         width="30px" height="30px" alt="Vk">
+            </center>
+        </messeger>
+
+        <!-- Instagram   -->
+        <messeger>
+            <center>
+                 <a href=""></a>
+                    <img src="https://github.com/yodo-im/python_pizza/blob/main/messeger/Instagram.png?raw=true"
+                         width="30px" height="30px" alt="Insta">
+            </center>
+            I
+        </messeger>
+
+    </messegers>
+
+</div>

@@ -1,0 +1,57 @@
+<div>
+    <!-- Элементы будут располагаться горизонтально. -->
+    <!-- flex-wrap: wrap говорит, что если контейнер не умещается по ширине в родительский контейнер, то он переносится на новую строку -->
+<!--  Ширина нашей страницы 1000 пикселей, мы сами её установили.  -->
+<!--  пропишем отступы по 10 пикселей. Причем отступы будут нужны внутри и снаружи. Если мы вычтем отступы снаружи, то ширина одного дочернего тега должна быть 230 пикселей, а еще и 15 пикселей убираем внутри. Остается 210 пикселей-->
+    <style>
+        pizzas {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        pizza {
+            margin: 10px;
+            width: 200px;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background: white;
+        }
+    </style>
+
+
+    <pizzas>
+        <pizza>
+<!--            Image -->
+            <img src="https://github.com/yodo-im/python_pizza/blob/main/pizza/carbonara.jpeg?raw=true"
+                 width="200px" height="200px" alt="">
+
+<!--            Title -->
+            <center>
+                <text>
+                    Карбонара
+                </text>
+            </center>
+
+<!--            Description -->
+            <text>
+                Бекон, сыры чеддер и пармезан,<br>
+                моцарелла, томаты черри, красный лук,<br>
+                чеснок, соус альфредо, итальянские травы
+            </text>
+
+<!--            Price -->
+            <h7>
+                300р.
+            </h7>
+
+<!--            Buy button -->
+            <button>
+                Заказать
+            </button>
+
+        </pizza>
+
+
+    </pizzas>
+</div>

@@ -1,0 +1,50 @@
+<div>
+    <style>
+        menu {
+             width: 1240px;
+            left: 10px;
+        }
+        pizza {
+            padding: 5px;
+            margin: 0;
+            width: 300px;
+            height: 510px;
+        }
+    </style>
+
+    <!-- Чтобы получить информацию из модели нужно написать имя, поставить точку и написать параметр, который хотим получить-->
+<!--  мы не передавали product, мы передали products     -->
+<!--  нужно перебрать все продукты и получить продукт, как не парадоксально это звучит  -->
+    {% for category in categories %}
+        <menu>
+            {% for product in products %}
+                <!-- чтобы не дублировались карточки и продукты соответствовали категориям -->
+                {% if product.category == category %}
+                    <pizza>
+            <div>
+                <img src="{{ product.imageURL }}"
+                     width="300" height="300" alt="" title="">
+                <div>
+                    <h4>
+                        {{ product.name }}
+                    </h4>
+                    <h6>
+                        {{ product.description }}
+                    </h6>
+                </div>
+                <div style="...">
+                    <h7>
+                        от {{ produsct.price }} Р
+                    </h7>
+
+                    <a href="" style="...">
+                        Купить
+                    </a>
+                </div>
+            </div>
+        </pizza>
+                {% endif %}
+            {% endfor %}
+        </menu>
+    {% endfor %}
+</div>
